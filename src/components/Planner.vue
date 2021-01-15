@@ -1,6 +1,7 @@
 <template>
 	<div :class="{title: true}">
 		Planner
+		<ManageTask />
 		<TaskList title="Plans for day" :tasks="newTasks" v-on:remove-task="handleRemoveTask" />
 		<TaskList title="Tasks in Progress" :tasks="inProgressTasks" v-on:remove-task="handleRemoveTask" />
 	</div>
@@ -8,6 +9,7 @@
 
 <script>
 import TaskList from "./planner/TaskList.vue"
+import ManageTask from "./planner/ManageTask.vue"
 
 export default {
 	data () {
@@ -34,6 +36,7 @@ export default {
 	},
 	components: {
 		TaskList,
+		ManageTask,
 	},
 	methods: {
 		handleRemoveTask(taskId) {
