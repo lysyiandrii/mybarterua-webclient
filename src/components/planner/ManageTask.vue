@@ -1,3 +1,6 @@
 <template>
-	<div>Manage Task</div>
+	<div>
+		<div>Description</div>
+		<div><input v-model=""></div>
+	</div>
 </template>
